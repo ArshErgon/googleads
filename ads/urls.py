@@ -2,9 +2,9 @@ from django.urls import path
 
 from . import views
 
-appname = "ads"
+app_name = "ads"
 
 urlpatterns = [
-    path('', views.desktop_home_page, name="home"),
-    path('<int:pk>/', views.desktop_single_page_recipes, name='single'),
+    path('', views.desktop_home_page, name="desktop_home_page"),
+    path('<slug:slug_title>/', views.desktop_single_page_recipes, name='desktop_single_page_recipes'),
 ]

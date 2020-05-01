@@ -84,47 +84,22 @@
     <h1>🍚Recipes🍚</h1>
   </center><br>
   <div class="row">
+    {% for recipe in all_recipes %}
     <div class="col-sm-4">
+    <a href="{{ recipe.get_absolute_url }}">
       <div class="card">
         <div class="card-title">
-          <center><img src="https://lh3.googleusercontent.com/d/1R8vwXmTjpfi-lTkWJ2HRZLWiY7Cq9yID?authuser=0" alt=""
+          <center><img src="{{ recipe.banner_image }}" alt=""
               width="100%" height="auto"></center>
         </div>
-        <p style="margin:auto;">Name of the food</p>
-        <div class="card-body">
-          hello world for the world
-        </div>
+        <p style="margin:auto;color:black;font-size: medium;word-spacing: 0em;font-weight: 600;">{{ recipe.title|capfirst }}</p><br>
       </div>
+      </a>
     </div>
-    <div class="col-sm-4">
-      <div class="card">
-        <div class="card-title">
-          <center><img src="https://lh3.googleusercontent.com/d/1HjQ0CYtIFnNHRsXxjQvRlAkdyF_-kHmD=s220?authuser=0"
-              alt="" width="100%" height="auto"></center>
-        </div>
-        <p style="margin:auto;">Name of the food</p>
-        <div class="card-body">
-          hello world for the world
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="card">
-        <div class="card-title">
-          <center><img src="https://lh3.googleusercontent.com/d/1HjQ0CYtIFnNHRsXxjQvRlAkdyF_-kHmD=s220?authuser=0"
-              alt="" width="100%" height="auto"></center>
-        </div>
-        <p style="margin:auto;">Name of the food</p>
-        <div class="card-body">
-          hello world for the world
-        </div>
-      </div>
-    </div>
+    {% endfor %}
   </div>
   <br>
-  <a href="">
-    <center><button type="button" name="button" class="btn btn-primary" id="see_more">See more</button></center>
-  </a>
+<center><a href="{% url 'ads:desktop_home_page' %}"><button type="button" name="button" class="btn btn-primary" id="see_more">See more</button></a><center></center>
 </div>
 </div>
 </div>
