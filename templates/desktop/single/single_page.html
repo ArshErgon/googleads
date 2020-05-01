@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% block title %}<title>{{ list_color }}</title>{% endblock %}
+{% block content %}
+
+    <div class="col-sm-2" style="left:-20px;">
+      <div class="jumbotron">
+        <center><p style="font-size:3rem;">Fresh🔥</p></center>
+        <ol>
+          <li>Cup toffee</li>
+          <br>
+          <li>Egg</li>
+          <br>
+          <li>Aloo tikki</li>
+          <br>
+          <li>omlette</li><br>
+          <li>omlette</li>
+          <li>Cup toffee</li>
+          <br>
+          <li>Egg</li>
+          <br>
+          <li>Aloo tikki</li>
+          <br>
+          <li>omlette</li>
+        </ol>
+      </div>
+    </div>
+    <div class="col-sm-2" style="right:-50px;float:right;position:absolute;top:48px;">
+      <div class="jumbotron">
+        <ol>
+          <li>Cup toffee</li>
+          <br>
+          <li>Egg</li>
+          <br>
+          <li>Aloo tikki</li>
+          <br>
+          <li>omlette</li>
+          <br>
+          <li>Cup toffee</li>
+          <br>
+          <li>Egg</li>
+          <br>
+          <li>Aloo tikki</li>
+          <br>
+          <li>omlette</li>
+          <li>Cup toffee</li>
+          <br>
+          <li>Egg</li>
+          <br>
+          <li>Aloo tikki</li>
+          <br>
+          <li>omlette</li>
+          <br>
+      </div>
+    </div>
+    </div>
+
+<div class="col-sm-8" style="margin:auto;top:-390pt;">
+  <img src="{{ single_rec_desplay.banner_image }}" alt="" width="100%" height="auto">
+</div>
+
+      <div class="col-sm-8" style="margin:auto;right:-20px;top:-450px !important;">
+        <div class="jumbotron" style="box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);">
+         {{ single_rec_desplay.recipe|safe }}
+      </div>
+    </div>
+
+    <div class="container" style="top:-19pc;position:relative;">
+    <center><h1>More Recipes🍚🍚</h1></center><br>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-title">
+              <center><img src="https://lh3.googleusercontent.com/d/1R8vwXmTjpfi-lTkWJ2HRZLWiY7Cq9yID?authuser=0" alt="" width="100%" height="auto"></center>
+            </div>
+            <p style="margin:auto;">Name of the food</p>
+            <div class="card-body">
+              hello world for the world
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-title">
+              <center><img src="https://lh3.googleusercontent.com/d/1HjQ0CYtIFnNHRsXxjQvRlAkdyF_-kHmD=s220?authuser=0" alt="" width="100%" height="auto"></center>
+            </div>
+            <p style="margin:auto;">Name of the food</p>
+            <div class="card-body">
+              hello world for the world
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-title">
+              <center><img src="https://lh3.googleusercontent.com/d/1HjQ0CYtIFnNHRsXxjQvRlAkdyF_-kHmD=s220?authuser=0" alt="" width="100%" height="auto"></center>
+            </div>
+            <p style="margin:auto;">Name of the food</p>
+            <div class="card-body">
+              hello world for the world
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <a href=""><center><button type="button" name="button" class="btn btn-primary" id="see_more">See more</button></center></a>
+    </div>
+  </div>
+</div>
+{% endblock %}

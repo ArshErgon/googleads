@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="eng, hindi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {{ seo_data|safe }}
+    <link rel="stylesheet" href="{% static 'css/desktop-style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    {% block title %}<title></title>{% endblock %}
+    <style>
+      html, body {
+        /*{{ list_color|safe }}*/
+        overflow-x: hidden !important;
+      }
+      ::selection {
+        background-color: #FFACFC;
+        color: white;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <p class="word-space-nav"><a href="#">     Home</a><a href="#">    Home</a><a href="#">       Home</a></p>
+    </div><br><br>
+  {% block content %}
+  {% endblock %}
+
+      <div class="footer"><br><br>
+        <center><div class="col-sm-12" style="background-color: royalblue;bottom:0px !important;position: static;margin:0 auto -142px;">
+          <span style="font-size: 20px;">Made with ❤ by ArshErgon</span>
+        </div></center>
+      </div>
+    </body>
+  </html>
