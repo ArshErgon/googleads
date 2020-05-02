@@ -2,12 +2,34 @@
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
             integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            {{ seo_data|safe }}
             
         {% block title %}
         {% endblock %}
     </head>
     <body>
+        <style>
+            .navbar {width: 100%;height: 50px;background-color: #dc2ade;}
+            .word-space-nav, a {margin: auto;color: white !important;font-size: 1.6rem;font-weight: bold;text-decoration: none !important;word-spacing: 10pt;}
+        </style>
+        <div class="navbar">
+            <p class="word-space-nav"><a href="{% url 'ads:mobile_home' %}"> Home</a></p>
+        </div><br><br>
         {% block body %}
         {% endblock %}
+        <div class="footer">
+        
+        </div>
+        
+        
+        <style>
+            .footer {
+               position: fixed;
+                bottom: 0;
+                width: 100%;
+                height: 40px;
+                background-color: red;
+            }
+        </style>
     </body>
 </html>

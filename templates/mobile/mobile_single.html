@@ -1,0 +1,44 @@
+{% extends 'mobile/base_mobile.html' %}
+{% block title %} <title>{{ single_recipe.title }}</title> {% endblock %}
+{% block body %}
+
+<div class="col-md-8" style="margin: 0px auto;">
+    <img src="{{ single_recipe.banner_image }}" alt="" width="100%" height="auto">
+</div>
+<br><br>
+<div class="col-xl-8">
+    <center><h1 style="font-size: 35px;font-weight: normal;">{{ single_recipe.title|capfirst}}</h1></center>
+    <div class="col-md-12" style="margin: auto;">
+        <div class="jumbotron" style="font-size: 20px;font-weight: 500;">
+            {{ single_recipe.recipe|safe }}
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="col-xl-12">
+        <center><h1>More Recipes🍚</h1></center><br>
+        <div class="row">
+            {% for recom in recom_recipes  %}
+            <div class="col-4">
+                <a href="{{ recom.get_absolute_url_mobile }}">
+                <div class="card">
+                    <img src="{{ recom.banner_image }}" alt="" width="100%" height="auto">
+                    <div class="card-title"><center>
+                        <div class="card-title" style="font-size: medium;color:black;font-weight: normal;word-spacing: 0em;">{{ recom.title|capfirst }}</div>
+                    </center></div>
+                </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+<div class="col-sm-8" style="background: palegreen;margin: 40px auto;">
+    google ads
+</div>
+<br><br>
+
+{% endblock %}

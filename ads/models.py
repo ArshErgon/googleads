@@ -17,6 +17,9 @@ class RecipeModel(models.Model):
 
     def get_absolute_url(self):
         return reverse('ads:desktop_single_page_recipes', args=[self.slug_title])
+    
+    def get_absolute_url_mobile(self):
+        return reverse('ads:mobile_single', args=[self.slug_title])
 
 class SEO(models.Model):
     seo_data = models.TextField()
