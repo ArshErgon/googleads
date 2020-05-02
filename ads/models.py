@@ -25,4 +25,4 @@ class SEO(models.Model):
     seo_data = models.TextField()
 
     def __str__(self):
-        return self.seo_data[:90]
+        return self.seo_data
